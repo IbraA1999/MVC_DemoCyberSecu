@@ -1,0 +1,54 @@
+﻿@model CreateContactForm
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="~/css/site.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 w-100">
+            <div class="navbar">
+                @Html.ActionLink("Accueil", "Index", "Home")
+                <a href="~/home/Index">Accueil</a>
+                <a href="~/home/Contact">Contact</a>
+                <a href="~/auth/login">Login</a>
+                <a href="~/auth/register">S'enregistrer</a>
+                <a href="~/Contact/GererContact">Gestion des contacts</a>
+            </div>
+        </nav>
+        <h1>Gestion contact</h1>
+    </header>
+    <nav>
+        <div class="sous-navbar">
+            <a href="~/Contact/GererContact">Afficher contact</a>
+            <a href="~/Contact/EnregistreContact">Enregistrer un contact</a>
+        </div>
+    </nav>
+    @if (!ViewContext.ModelState.IsValid)
+    {
+        @Html.ValidationSummary(false, $"Le formulaire contient {ViewContext.ModelState.ErrorCount} erreur(s)");
+    }
+    <form class="form-enregistrement" method="post">
+        <div class="form-register">
+            <label>Prenom</label>
+            @Html.EditorFor(model => model.Prenom, new {@class="form-control"}) <br />
+            @Html.ValidationMessageFor(expression: model => model.Prenom, message: null, htmlAttributes: new { @class="text-danger"} )
+        </div>
+        <div class="form-register">
+            <label>nom</label>
+            @Html.EditorFor(model => model.Nom, new { @class = "form-control" }) <br /> <br />
+            @Html.ValidationMessageFor(expression: model => model.Nom, message: null, htmlAttributes: new { @class = "text-danger" })
+        </div>
+        <div class="form-register">
+            <label>email</label>
+            @Html.EditorFor(model => model.Email, new { @class = "form-control" }) <br /> <br />
+            @Html.ValidationMessageFor(expression: model => model.Email, message: null, htmlAttributes: new { @class = "text-danger" })
+        </div>
+        <button class="form-register-btn" type="submit" value="send">Enregister le contact</button>
+    </form>
+</body>
+</html>

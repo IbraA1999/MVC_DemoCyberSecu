@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Contact>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="~/css/site.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 w-100">
+            <div class="navbar">
+                <a href="~/home/Index">Accueil</a>
+                <a href="~/home/Contact">Contact</a>
+                <a href="~/auth/login">Login</a>
+                <a href="~/auth/register">S'enregistrer</a>
+                <a href="~/Contact/GererContact">Gestion des contacts</a>
+            </div>
+        </nav>
+    <h1>Gestion contact</h1>
+    </header>
+    <nav>
+        <div class="sous-navbar">
+            <a href="~/Contact/GererContact">Afficher contact</a>
+            <a href="~/Contact/EnregistreContact">Enregistrer un contact</a>
+        </div>
+    </nav>
+    <table>
+        <thead>
+            <tr>
+                <th>Prenom</th>
+                <th>Nom</th>
+                <th>Email</th>
+                <th>Detail</th>
+                <th>Modifier</th>
+                <th>Supprimer</th>
+                
+            </tr>
+        </thead>
+        
+         @foreach (Contact contact in Model)
+         {
+            <tr>
+                <td>@contact.Nom</td>
+                <td>@contact.Prenom</td>
+                <td>@contact.Email</td>
+                <td><button><a asp-action="DetailContact" asp-route-id="@contact.Id" class="delete-btn">Detail</a></button></td>
+                <td><button><a asp-action="ModifierContact" asp-route-id="@contact.Id" class="delete-btn">Modifier</a></button></td>
+                <td><button><a asp-action="DeleteContact" asp-route-id="@contact.Id" class="delete-btn">Supprimer</a></button></td>
+            </tr>      
+         }
+    </table>
+</body>
+</html>

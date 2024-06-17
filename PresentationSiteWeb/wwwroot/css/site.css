@@ -1,0 +1,213 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2F4F4F;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-family: sans-serif;
+    font-weight: 500;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.navbar a {
+        text-decoration: none;
+        color: inherit;
+        margin-right: 1rem;
+        transition: all 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: #339999;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.sous-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: deepskyblue;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-family: sans-serif;
+    font-weight: 300;
+    width: 20%;
+    margin-bottom: 50px;
+    margin: auto;
+}
+
+.sous-navbar a {
+    text-decoration: none;
+    color: inherit;
+    margin-right: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.sous-navbar a:hover {
+    color: #339999;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+
+.register-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 25%;
+    margin-top: 25px;
+    margin-left: 35%;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 50%;
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: royalblue;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+img {
+    width: 250px;
+    height: 350px;
+}
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: auto;
+    font-size: 18px;
+    text-align: left;
+    margin-top: 25px;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: dimgrey;
+}
+
+tr:hover {
+    background-color: #CC102C;
+}
+
+tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+    tr:nth-child(even):hover {
+        background-color: #CC102C;
+    }
+
+
+
+.form-enregistrement {
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    margin-top: 25px;
+}
+
+
+
+.form-register {
+
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom : 25px;
+    width: 30%;
+}
+
+.form-register input {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    margin-top: 25px;
+}
+
+.form-register label {
+    width: 30%;
+    font-weight : 900;
+    font-size : 25px
+}
+
+.form-register-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: royalblue;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+
+.delete-btn {
+   text-decoration: none;
+   color: white;
+}

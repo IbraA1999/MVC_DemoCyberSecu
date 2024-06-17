@@ -1,0 +1,46 @@
+﻿@model Contact;
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="~/css/site.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 w-100">
+            <div class="navbar">
+                <a href="~/home/Index">Accueil</a>
+                <a href="~/home/Contact">Contact</a>
+                <a href="~/auth/login">Login</a>
+                <a href="~/auth/register">S'enregistrer</a>
+                <a href="~/Contact/GererContact">Gestion des contacts</a>
+            </div>
+        </nav>
+        <h1>Gestion contact</h1>
+    </header>
+    <nav>
+        <div class="sous-navbar">
+            <a href="~/Contact/GererContact">Afficher contact</a>
+            <a href="~/Contact/EnregistreContact">Enregistrer un contact</a>
+        </div>
+    </nav>
+    <form class="form-enregistrement" method="post">
+        <div class="form-register">
+            <label>Prenom</label>
+            <input type="text" name="Prenom" placeholder="John" required />
+        </div>
+        <div class="form-register">
+            <label>nom</label>
+            <input type="text" name="nom" placeholder="Doe" required />
+        </div>
+        <div class="form-register">
+            <label>email</label>
+            <input type="email" name="email" placeholder="exemple@hotmail.fr" required />
+        </div>
+        <button class="form-register-btn" type="submit" value="send">Modifier contact</button>
+    </form>
+</body>
+</html>
